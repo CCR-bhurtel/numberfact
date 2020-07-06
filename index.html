@@ -1,0 +1,108 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=5, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/b704955f26.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #fact,
+      #factdate {
+        color: #141c2c;
+        display: none;
+      }
+    </style>
+    <title>Facts Club</title>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card bg-secondary text-white mt-5 p-4">
+            <h1 class="text-center">Number Facts</h1>
+            <p>Enter a number and get a random fact</p>
+            <input
+              type="number"
+              class="form-control form-control-lg"
+              id="numberinput"
+              placeholder="Enter a number..."
+            />
+            <button class="btn btn-danger mt-3 text-white" id="numberbutton">
+              Enter
+            </button>
+            <div id="fact" class="card-body">
+              <h4 class="card-title">
+                Fact:
+              </h4>
+              <p id="fact-text" class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mx-auto">
+          <div class="card bg-primary text-white mt-5 p-4 mb-5">
+            <h1 class="text-center">Date Facts</h1>
+            <p>Enter a date and get a random fact (ignore the year)</p>
+            <input
+              type="date"
+              class="form-control form-control-lg"
+              id="dateinput"
+            />
+            <button class="btn btn-success mt-3 text-white" id="datebutton">
+              Enter
+            </button>
+            <div id="factdate" class="card-body">
+              <h4 class="card-title">
+                Fact:
+              </h4>
+              <p id="fact-date" class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container mx-auto">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/bhurtelbro11">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/CCR-bhurtel">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted" style="margin-left: 30%;">
+              Copyright &copy; facthub@ccr 2020
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
