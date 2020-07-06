@@ -43,15 +43,18 @@ function getfactFetchnumber() {
 }
 function getfactFetchdate() {
   const fulldate = new Date(document.getElementById("dateinput").value);
+
   console.log(fulldate);
   let month = fulldate.getMonth() + 1;
   let date = fulldate.getDate();
   console.log(month);
   console.log(date);
-  fetch(`http://numbersapi.com/${month}/${date}/date`)
-    .then((res) => res.text())
-    .then((data) => {
-      factdate.style.display = "block";
-      datefact.innerText = data;
-    });
+  if (fulldate != "Invalid Date") {
+    fetch(`http://numbersapi.com/${month}/${date}/date`)
+      .then((res) => res.text())
+      .then((data) => {
+        factdate.style.display = "block";
+        datefact.innerText = data;
+      });
+  }
 }
